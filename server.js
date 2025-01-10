@@ -14,6 +14,9 @@ connectDB();
 app.use(express.json()); 
 
 // Routes
+app.use('/', (req,res) => {
+  res.send("Server is running")
+})
 app.use('/api', cryptoRoutes);
 
 // Start the server
